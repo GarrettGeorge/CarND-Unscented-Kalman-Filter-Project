@@ -9,6 +9,8 @@ using namespace std;
 
 class Tools {
 public:
+  VectorXd max_rmse;
+  
   /**
   * Constructor.
   */

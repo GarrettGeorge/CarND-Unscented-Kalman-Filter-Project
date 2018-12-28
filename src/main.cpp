@@ -103,6 +103,7 @@ int main()
     	  gt_values(1) = y_gt; 
     	  gt_values(2) = vx_gt;
     	  gt_values(3) = vy_gt;
+//   		  std::cout << "ground \t--\n" << gt_values << std::endl;
     	  ground_truth.push_back(gt_values);
           
           //Call ProcessMeasurment(meas_package) for Kalman filter
@@ -129,6 +130,8 @@ int main()
 
     	  VectorXd RMSE = tools.CalculateRMSE(estimations, ground_truth);
 
+          std::cout << "-- RMSE --\n" << tools.max_rmse << std::endl;
+          
           json msgJson;
           msgJson["estimate_x"] = p_x;
           msgJson["estimate_y"] = p_y;
@@ -186,90 +189,3 @@ int main()
   }
   h.run();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

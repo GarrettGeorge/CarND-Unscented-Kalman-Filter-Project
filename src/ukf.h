@@ -57,6 +57,9 @@ public:
 
   ///* Weights of sigma points
   VectorXd weights_;
+  
+  ///* Sigma points to be reused
+  MatrixXd Xsig_pred;
 
   ///* State dimension
   int n_x_;
@@ -67,7 +70,9 @@ public:
   ///* Sigma point spreading parameter
   double lambda_;
 
-
+  double nis_radar;
+  double nis_lidar;
+  
   /**
    * Constructor
    */
